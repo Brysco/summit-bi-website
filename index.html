@@ -1,117 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summit BI - Supply Chain Analytics & AI Enablement</title>
-    <meta name="description" content="Modernize your supply chain with Databricks integration, advanced analytics, and scalable AI solutions.">
-    <!-- Tailwind CSS for rapid styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hero-bg {
-            background-image: linear-gradient(to right bottom, #111827, #1f2937, #374151);
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Summit Analytics | The Intelligent Stratum</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "secondary": "#a5e7ff",
+                "on-secondary": "#003543",
+                "surface-container-highest": "#34343a",
+                "surface-variant": "#34343a",
+                "on-error": "#690005",
+                "outline-variant": "#4e453d",
+                "on-primary-container": "#4f3e2a",
+                "on-tertiary": "#3c0090",
+                "secondary-container": "#00d2ff",
+                "on-secondary-container": "#00566a",
+                "error": "#ffb4ab",
+                "on-primary-fixed": "#271908",
+                "tertiary-fixed": "#e9ddff",
+                "on-tertiary-fixed": "#23005b",
+                "on-primary": "#3e2d1b",
+                "on-primary-fixed-variant": "#564330",
+                "secondary-fixed": "#b6ebff",
+                "inverse-surface": "#e4e1e8",
+                "on-secondary-fixed-variant": "#004e60",
+                "surface-container-lowest": "#0e0e12",
+                "surface": "#131318",
+                "tertiary": "#d2beff",
+                "surface-container-high": "#2a292f",
+                "outline": "#9a8f85",
+                "surface-container": "#1f1f24",
+                "tertiary-container": "#ba9dff",
+                "surface-tint": "#dcc2a8",
+                "on-background": "#e4e1e8",
+                "inverse-primary": "#6f5b46",
+                "inverse-on-surface": "#303035",
+                "tertiary-fixed-dim": "#d1bcff",
+                "primary": "#dfc4aa",
+                "primary-container": "#c2a990",
+                "primary-fixed-dim": "#dcc2a8",
+                "surface-dim": "#131318",
+                "on-tertiary-fixed-variant": "#5700c9",
+                "surface-container-low": "#1b1b20",
+                "on-secondary-fixed": "#001f28",
+                "surface-bright": "#39393e",
+                "on-tertiary-container": "#5000ba",
+                "primary-fixed": "#fadec3",
+                "error-container": "#93000a",
+                "secondary-fixed-dim": "#47d6ff",
+                "on-surface": "#e4e1e8",
+                "on-error-container": "#ffdad6",
+                "background": "#131318",
+                "on-surface-variant": "#d1c4ba"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
         }
-        .databricks-red {
-            color: #FF3621;
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(31, 31, 36, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .data-streak-vertical {
+            width: 2px;
+            background: linear-gradient(to bottom, #a5e7ff, #d2beff);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold tracking-tight text-gray-900">Summit <span class="text-blue-600">BI</span></span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#expertise" class="text-sm font-medium text-gray-600 hover:text-gray-900">Expertise</a>
-                    <a href="#services" class="text-sm font-medium text-gray-600 hover:text-gray-900">Services</a>
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md text-sm font-semibold transition">Consultation</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="hero-bg text-white py-24 sm:py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
-            <div class="md:w-2/3">
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
-                    Unlock <span class="text-blue-400">AI Enablement</span> for the Modern Supply Chain.
-                </h1>
-                <p class="text-xl text-gray-300 mb-8 max-w-2xl">
-                    We bridge the gap between raw data and operational intelligence. Summit BI specializes in migrating, modernizing, and scaling analytics using the Databricks Data Intelligence Platform.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition">Start the Conversation</a>
-                    <a href="#expertise" class="bg-gray-800 hover:bg-gray-700 border border-gray-600 text-white font-semibold py-3 px-8 rounded-lg transition">Explore Our Approach</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Core Expertise -->
-    <div id="expertise" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Built on Databricks. Engineered for Impact.</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Your supply chain generates millions of data points daily. We build the architecture to process, analyze, and act on them in real-time.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <!-- Feature 1 -->
-                <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
-                    <div class="text-blue-600 mb-4">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Lakehouse Architecture</h3>
-                    <p class="text-gray-600">Break down data silos. We design and implement Delta Lake architectures that unify your warehousing and AI workflows under one roof.</p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
-                    <div class="text-blue-600 mb-4">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">AI Enablement</h3>
-                    <p class="text-gray-600">From predictive demand forecasting to automated inventory routing, we operationalize Machine Learning models directly against your supply chain data.</p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
-                    <div class="text-blue-600 mb-4">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">BI & Visualization</h3>
-                    <p class="text-gray-600">Deliver actionable insights to stakeholders. We construct robust Databricks SQL dashboards and integrate seamlessly with tools like Power BI and Tableau.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact CTA -->
-    <div id="contact" class="bg-blue-600 py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">Ready to scale your analytics?</h2>
-            <p class="text-blue-100 text-lg mb-8">Let's discuss how Databricks can transform your supply chain operations.</p>
-            <a href="mailto:bryan@summit-bi.com" class="inline-block bg-white text-blue-600 font-bold py-3 px-10 rounded-lg shadow hover:bg-gray-50 transition">Contact Us</a>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center">
-        <p class="text-gray-400 text-sm">&copy; 2026 Summit BI. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary/30 selection:text-secondary">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#131318]/60 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#dfc4aa]">Summit Analytics</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight text-[#dfc4aa] border-b-2 border-[#dfc4aa] pb-1" href="#">Solutions</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight text-[#dfc4aa]/70 hover:text-[#dfc4aa] transition-colors" href="#">AI Enablement</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight text-[#dfc4aa]/70 hover:text-[#dfc4aa] transition-colors" href="#">Case Studies</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight text-[#dfc4aa]/70 hover:text-[#dfc4aa] transition-colors" href="#">Services</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold px-6 py-2 rounded-lg scale-95 active:scale-100 transition-all hover:shadow-[0_0_20px_rgba(223,196,170,0.3)]">
+                Get Started
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-surface via-surface/80 to-surface"></div>
+<img class="w-full h-full object-cover opacity-20 scale-110" data-alt="Abstract 3D data visualization with glowing nodes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBazpeQmaXw9xrFQPr7aF87KPVsDpoWl5HV1XyxS-s6SGhnrQB4lUSxfJijTl7NkjOOubBD8Yczt_wcLsWng9WPCy3_g4oXPetaXmTUjv0KTMz1Qm9YQgDN5ybkzr0eaYEz86tPpLR9a8eedqdSKDehT6ndCggPe-Z0e3Nj2XzmdfgESQ49kv18Z2pQJ9ZlNg6Yh3kKN-zVvGKIJnuc3nyQ5Ll9NUXoDOOibhnai5CC3yr0z2pY7FAXOURsujMZOGzWQjKIGQXcq1_t"/>
+</div>
+<!-- Data Streak Decor -->
+<div class="absolute left-1/4 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-secondary/20 to-transparent"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-3xl">
+<span class="inline-block px-3 py-1 bg-secondary/10 text-secondary text-xs font-bold tracking-[0.2em] rounded-full mb-6 uppercase">Intelligence Orchestrated</span>
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-8">
+                        Elevate Your Business with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-secondary">Intelligent Analytics</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                        Harness the power of Databricks and bespoke AI enablement to transform fragmented data into a cohesive stratum of strategic wisdom.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold px-8 py-4 rounded-lg flex items-center gap-2 group transition-all hover:scale-105">
+                            Launch Transformation
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="px-8 py-4 border border-outline-variant/20 rounded-lg text-primary font-headline font-bold hover:bg-surface-container-highest transition-all">
+                            Explore Strategy
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Logo Bar -->
+<section class="py-12 bg-surface-container-lowest border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8">
+<p class="text-center font-label text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/50 mb-8">Trusted by Industry Leaders</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all">
+<div class="text-2xl font-bold font-headline text-on-surface/80">CORE_SYNC</div>
+<div class="text-2xl font-bold font-headline text-on-surface/80">NEURAL_SYS</div>
+<div class="text-2xl font-bold font-headline text-on-surface/80">VORTEX_DATA</div>
+<div class="text-2xl font-bold font-headline text-on-surface/80">QUANTUM_ARC</div>
+<div class="text-2xl font-bold font-headline text-on-surface/80">ZENITH_AI</div>
+</div>
+</div>
+</section>
+<!-- Expertise Section: Asymmetric Layout -->
+<section class="py-32 px-8 max-w-7xl mx-auto relative">
+<div class="grid md:grid-cols-2 gap-24 items-center">
+<div class="relative order-2 md:order-1">
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="bg-surface-container p-1 rounded-xl shadow-[0_24px_48px_rgba(0,0,0,0.4)]">
+<img class="rounded-lg" data-alt="Modern high-tech analytics dashboard interface on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-efrCn2xtetIKpw3_uB5ns0fx23bcc6Zj6sbNrfYeVUFugTjW6mxPl7BdyFwwVh5taQzcbHRZ03RRDKWkjP7wJlig3qluueEvdx2Js7QNGMSUEib5-i-3DKrJXFMiPGU8UwtBaayqJMnfNCDI-U4euGQsbazqD-gDukSEDPM2RGSq1kOzxtw5uOJZYbmiR0saL5iGMTmtptjTMWtgMts2MIzhGM5nrvAM-Uv-vtgHTLbH-k8RR9PGodAQnkKnvcNVh35eKTYPPykL"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-surface-container-highest p-6 rounded-lg glass-panel border border-outline-variant/10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">speed</span>
+</div>
+<div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Processing Speed</div>
+<div class="text-xl font-bold font-headline text-primary">2.4 PB/s</div>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="font-headline text-4xl font-bold mb-6 text-on-surface">Our Expertise: The Databricks Advantage</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                        We don't just build dashboards; we architect intelligence. By leveraging the Unified Data Analytics Platform, we eliminate silos and create a singular, performant source of truth for your entire enterprise.
+                    </p>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Lakehouse Architecture</h4>
+<p class="text-sm text-on-surface-variant">Merging the best of data lakes and data warehouses for seamless scaling.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Delta Live Tables</h4>
+<p class="text-sm text-on-surface-variant">Reliable and automated data pipelines with built-in quality controls.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<div>
+<h4 class="font-headline font-bold text-on-surface">MLflow Orchestration</h4>
+<p class="text-sm text-on-surface-variant">Streamlining the machine learning lifecycle from development to deployment.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20 text-center">
+<h2 class="font-headline text-5xl font-extrabold tracking-tight text-on-surface mb-4">Strategic Frameworks</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Scalable solutions designed for the complexity of the modern enterprise.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Data Engineering -->
+<div class="md:col-span-2 bg-surface-container-highest p-12 rounded-xl relative overflow-hidden group hover:scale-[1.01] transition-all">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 blur-[100px] pointer-events-none"></div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6">database</span>
+<h3 class="font-headline text-3xl font-bold mb-4">Data Engineering</h3>
+<p class="text-on-surface-variant text-lg max-w-lg mb-8">Robust ETL/ELT architecture that powers high-volume stream and batch processing with unparalleled reliability.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-[10px] rounded uppercase font-bold border border-outline-variant/10">Apache Spark</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-[10px] rounded uppercase font-bold border border-outline-variant/10">PySpark</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-[10px] rounded uppercase font-bold border border-outline-variant/10">SQL</span>
+</div>
+</div>
+<!-- AI & Machine Learning -->
+<div class="bg-surface-container-highest p-12 rounded-xl border border-outline-variant/5 hover:scale-[1.01] transition-all">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-6">psychology</span>
+<h3 class="font-headline text-3xl font-bold mb-4">AI &amp; ML</h3>
+<p class="text-on-surface-variant mb-8">Custom LLMs and predictive models tailored to your business DNA.</p>
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary to-secondary w-3/4"></div>
+</div>
+</div>
+<!-- Strategic Consulting -->
+<div class="bg-surface-container-highest p-12 rounded-xl border border-outline-variant/5 hover:scale-[1.01] transition-all">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">insights</span>
+<h3 class="font-headline text-3xl font-bold mb-4">Strategic Consulting</h3>
+<p class="text-on-surface-variant mb-8">Bridging the gap between technical infrastructure and C-suite objectives.</p>
+</div>
+<!-- Enablement -->
+<div class="md:col-span-2 bg-gradient-to-br from-surface-container-highest to-surface-container p-12 rounded-xl relative overflow-hidden flex flex-col md:flex-row gap-12 items-center hover:scale-[1.01] transition-all">
+<div class="flex-1">
+<h3 class="font-headline text-3xl font-bold mb-4">Enterprise AI Enablement</h3>
+<p class="text-on-surface-variant">We don't just hand over keys; we empower your teams to build, scale, and maintain sophisticated AI systems independently.</p>
+</div>
+<div class="flex-shrink-0 grid grid-cols-2 gap-4">
+<div class="w-24 h-24 bg-surface rounded-lg flex items-center justify-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary opacity-50">school</span>
+</div>
+<div class="w-24 h-24 bg-surface rounded-lg flex items-center justify-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary opacity-50">groups</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-5xl mx-auto bg-[#1f1f24] rounded-2xl p-16 text-center relative border border-outline-variant/10 shadow-[0_48px_96px_-24px_rgba(0,0,0,0.6)]">
+<div class="absolute -top-32 -left-32 w-64 h-64 bg-primary/5 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-32 -right-32 w-64 h-64 bg-secondary/5 rounded-full blur-[100px]"></div>
+<h2 class="font-headline text-5xl font-extrabold mb-8">Ready to Transform?</h2>
+<p class="text-on-surface-variant text-xl max-w-xl mx-auto mb-12">Join the league of industry leaders who have achieved architectural clarity and strategic dominance with Summit Analytics.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold px-10 py-5 rounded-lg text-lg hover:shadow-[0_0_30px_rgba(223,196,170,0.4)] transition-all">
+                        Book a Consultation
+                    </button>
+<a class="text-primary font-bold hover:underline" href="#">Download Service Guide</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e12] w-full py-12 px-8 border-t border-[#4e453d]/15">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+<div>
+<div class="text-lg font-bold text-[#dfc4aa] mb-2">Summit Analytics</div>
+<p class="font-['Inter'] text-xs text-[#dfc4aa]/50">© 2024 Summit Analytics. The Intelligent Stratum.</p>
+</div>
+<div class="flex flex-wrap md:justify-end gap-6">
+<a class="font-['Inter'] text-xs text-[#dfc4aa]/40 hover:text-[#dfc4aa] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs text-[#dfc4aa]/40 hover:text-[#dfc4aa] transition-colors" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-xs text-[#dfc4aa]/40 hover:text-[#dfc4aa] transition-colors" href="#">LinkedIn</a>
+<a class="font-['Inter'] text-xs text-[#dfc4aa]/40 hover:text-[#dfc4aa] transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
